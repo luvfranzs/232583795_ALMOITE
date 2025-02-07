@@ -1,18 +1,176 @@
-<style>
-.flex-container {
-display: flex;
-background-color: DodgerBlue;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.flex-container > div {
-background-color: #f1f1f1;
-margin: 5px;
-padding: 10px;
-font-size: 20px;
+body {
+    font-family: 'Roboto', sans-serif;
 }
 
-.flex-container {
-display: flex;
-flex-direction: column;
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
-</style>
+
+header .logo h1 {
+    font-size: 24px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+
+header nav ul li a:hover {
+    color: #f9c10f;
+}
+
+#hero {
+    height: 300px;
+    background: url('https://via.placeholder.com/1600x600') no-repeat center center/cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-btn {
+    background-color: #f9c10f;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #f8a00b;
+}
+
+.section {
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-item {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.service-item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 16px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f9c10f;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #f8a00b;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 28px;
+    }
+
+    #hero p {
+        font-size: 18px;
+    }
+}
